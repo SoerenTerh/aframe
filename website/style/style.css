@@ -3,6 +3,7 @@ font-family: 'Amatic SC', cursive;
 font-family: 'Source Code Pro', monospace;
 */
 
+
 body {
     font: 15px 'Source Code Pro', monospace;
     padding-top: 65px; 
@@ -10,7 +11,8 @@ body {
 
 h1, h2, h3, h4, h5 {
     font: 200% 'Amatic SC', cursive;
-    color:turquoise;
+    color: #009EE8;
+	font-weight: bold;
 }
 h2 {
     padding-top: 25px;
@@ -37,6 +39,35 @@ nav, .navbar-brand{
     content: "\eab0";
 }
 
+.textmitglieder {
+	padding-top: 150px;
+	
+}
+
+.mitglied{
+	font-style: italic;
+	color: #009EE8;
+    text-align: center;
+	font: 300% 'Amatic SC';
+}
+
+.mitgliedLink{
+    text-align: center;
+    color: black;
+    margin-top: -25px;
+}
+
+.mitgliedLink > a:link, .mitgliedLink > a:visited, .mitgliedLink > a:hover, .mitgliedLink > a:active {
+    color: black;
+}
+
+
+@media screen and (max-width: 480px){
+    .mitglied {
+        padding-left: 20%;
+    }
+}
+
 .text {
     padding-top: 50px;
     font-style: italic;
@@ -47,7 +78,14 @@ nav, .navbar-brand{
 }
 
 .foot {
+    font-size: 80%;
     background: #333;
+    bottom: 0px;
+}
+
+.text-muted {
+    margin-bottom: 0px;
+    margin-top: 10px;
 }
 
 .content, iframe {
@@ -60,11 +98,14 @@ nav, .navbar-brand{
 
 
 /*progressbar*/
+.progress-bar {
+   border: 0px solid rgba(245, 245, 245, 1); border-radius: 15px; height: 20px;}
+
 .progress {
     margin-top: 5%;
-    width: 90%;
+    width: 91%;
 }
-.one, .two, .three, .four, .five, .six, .seven, .eight, .nine{
+.one, .two, .three, .four, .five, .six, .seven, .eight, .nine, .future{
     position:absolute;
     margin-top:-10px;
     z-index:1;
@@ -73,32 +114,36 @@ nav, .navbar-brand{
     border-radius:25px;
 }
 .one{
-    left:10%;
+    left:9%;
 }
 .two{
-    left:20%;
+    left:18%;
 }
 .three{
-    left:30%;
+    left:27%;
 }
 .four {
-    left:40%;
+    left:36%;
 }
 .five {
-    left:50%;
+    left:45%;
 }
 .six {
-    left:60%;
+    left:54%;
 }
 .seven {
-    left:70%;
+    left:63%;
 }
 .eight {
-    left:80%;
+    left:72%;
 }
 .nine {
-    left:89%;
+    left:81%;
 }
+.future {
+    left:90%;
+}
+
 
 .primary-color{
     background-color:turquoise;
@@ -118,6 +163,10 @@ nav, .navbar-brand{
     font: 30px 'Amatic SC', cursive;
 }
 
+.imgUs {
+    margin: 0 auto
+}
+
 /*fancybox*/
 a.fancybox img {
         border: none;
@@ -127,3 +176,4 @@ a.fancybox img {
 a.fancybox:hover img {
         position: relative; z-index: 999; -o-transform: scale(1.03,1.03); -ms-transform: scale(1.03,1.03); -moz-transform: scale(1.03,1.03); -webkit-transform: scale(1.03,1.03); transform: scale(1.03,1.03);
 }
+

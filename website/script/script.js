@@ -1,6 +1,6 @@
 $(document).ready(function () {
     "use strict";
-    
+
     $(".link").click(function () {
         $(this).attr('target', '_blank');
     });
@@ -15,25 +15,39 @@ $(document).ready(function () {
         $(".sevenInfo").addClass("hide");
         $(".eightInfo").addClass("hide");
         $(".nineInfo").addClass("hide");
+        $(".futureInfo").addClass("hide");
+        
     }
-    
+
     //Process Bar
     var endDate = new Date("02/09/2017"),
         beginDate = new Date("11/17/2016"),
-        
+
         endHolidays = new Date("01/08/2017"),
         beginHolidays = new Date("12/24/2016"),
         holidays = (endHolidays - beginHolidays),
-        
+
         totalTime = (endDate - beginDate + holidays),
         d = new Date(),
         dateProgress = new Date(d.getFullYear() + '/' + (d.getMonth() + 1) + '/' + d.getDate()) - beginDate,
-//        dateProgress = new Date("01/12/2017")-beginDate,
-        completionPercentage = (Math.round((dateProgress / totalTime) * 100)),
-        output = completionPercentage + 10 + "%";
+        //        dateProgress = new Date("02/30/2017") - beginDate,
+
+        completionPercentage = 0,
+        output = 0;
+    
+//    if (dateProgress < endDate) {
+//        completionPercentage = (Math.round((dateProgress / totalTime) * 100) * 1.07);
+//        output = completionPercentage  + "%";
+//    } else {
+    output = 91  + "%";
+//    }
+
+
+
+       
     $(".progress-bar").css('width', output);
-    
-    
+
+
     function color(x) {
         $(".primary-color").css("background-color", "turquoise");
         $(".no-color").css("background-color", "inherit");
@@ -103,8 +117,15 @@ $(document).ready(function () {
             $(".nineInfo").removeClass("hide");
         }
     });
-    
-        //fancybox
+    $(".future").on('click mouseover', function () {
+        color(this);
+        if ($(".futureInfo").hasClass("hide")) {
+            hide();
+            $(".futureInfo").removeClass("hide");
+        }
+    });
+
+    //fancybox
     $(function () {
         var addToAll = true,
             gallery = true,
@@ -123,8 +144,4 @@ $(document).ready(function () {
             titlePosition: titlePosition
         });
     });
-
-    
-
-
 });

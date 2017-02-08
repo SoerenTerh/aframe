@@ -1,4 +1,4 @@
-{
+ {
   "name": "aframe-hello-world-boilerplate",
   "description": "Boilerplate with A-Frame's 'Hello, World!' of WebVR.",
   "version": "0.3.0",
@@ -19,5 +19,8 @@
     "aframe-scene",
     "webvr",
     "vr"
-  ]
+  ],
+  "dependencies": {
+    "aframe-physics-system": "^1.2.0"
+  }
 }
